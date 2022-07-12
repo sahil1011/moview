@@ -13,7 +13,7 @@ class Movies extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3200/movies")
+    fetch("https://moview-backend.herokuapp.com/movies")
       .then((res) => res.json())
       .then((json) => {
         console.log(json);

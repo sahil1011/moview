@@ -9,7 +9,7 @@ const Details = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get("http://localhost:3200/featuredMovieData/" + id)
+        .get("https://moview-backend.herokuapp.com/featuredMovieData/" + id)
         .then((res) => {
           setData(res.data);
         })

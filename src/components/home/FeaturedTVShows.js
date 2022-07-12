@@ -14,7 +14,7 @@ class FeaturedTVShows extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3200/featuredTvShowsData")
+    fetch("https://moview-backend.herokuapp.com/featuredTvShowsData")
       .then((res) => res.json())
       .then((json) => {
         console.log(json);

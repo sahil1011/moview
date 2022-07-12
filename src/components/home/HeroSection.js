@@ -13,7 +13,7 @@ class HeroSection extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3200/featuredHeroSectionData")
+    fetch("https://moview-backend.herokuapp.com/featuredHeroSectionData")
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
