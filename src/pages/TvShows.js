@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 class TvShows extends React.Component {
   // Constructor
@@ -24,10 +25,6 @@ class TvShows extends React.Component {
   }
 
   render() {
-    const navigateToPage = (key) => {
-      let nav = useNavigate();
-      return nav("/tvDetials/" + key);
-    };
     const { DataisLoaded, items } = this.state;
     const settings = {
       dots: true,
@@ -44,15 +41,16 @@ class TvShows extends React.Component {
       );
     return (
       <div className="grid grid-cols-8 gap-4">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => navigation.navigate("details/tv/" + item.id)}
-          >
-            <h3>{item.title}</h3>
-            <img src={item.image} />
-          </div>
-        ))}
+        {items?.length > 0 &&
+          items.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => useNavigate().nav("details/tv/" + item.id)}
+            >
+              <h3>{item.title}</h3>
+              <img src={item.image} />
+            </div>
+          ))}
       </div>
     );
   }

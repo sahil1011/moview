@@ -35,11 +35,12 @@ class HeroSection extends React.Component {
     };
     return (
       <Slider {...settings}>
-        {items.map((item) => (
-          <div>
-            <img src={item.image} width={1500} height={1000} />
-          </div>
-        ))}
+        {items?.length > 0 &&
+          items.map((item) => (
+            <div>
+              <img src={item.image} width={1500} height={1000} />
+            </div>
+          ))}
       </Slider>
     );
   }
