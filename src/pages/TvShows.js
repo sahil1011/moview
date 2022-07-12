@@ -13,7 +13,7 @@ class TvShows extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/tvshows")
+    fetch("http://localhost:3200/tvshows")
       .then((res) => res.json())
       .then((json) => {
         console.log(json);

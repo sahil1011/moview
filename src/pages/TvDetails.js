@@ -9,7 +9,7 @@ const TvDetails = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get("http://localhost:3000/featuredTvShowsData/" + id)
+        .get("http://localhost:3200/featuredTvShowsData/" + id)
         .then((res) => {
           setData(res.data);
         })

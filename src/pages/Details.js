@@ -9,7 +9,7 @@ const Details = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get("http://localhost:3000/featuredMovieData/" + id)
+        .get("http://localhost:3200/featuredMovieData/" + id)
         .then((res) => {
           setData(res.data);
         })

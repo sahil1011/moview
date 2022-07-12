@@ -13,7 +13,7 @@ class HeroSection extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/featuredHeroSectionData")
+    fetch("http://localhost:3200/featuredHeroSectionData")
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
