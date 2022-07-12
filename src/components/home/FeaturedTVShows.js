@@ -36,7 +36,7 @@ class FeaturedTVShows extends React.Component {
     if (!DataisLoaded)
       return (
         <div>
-          <h1> Pleses wait some time.... </h1>{" "}
+          <h1> Pleses wait some time.... </h1>
         </div>
       );
     return (
@@ -47,7 +47,7 @@ class FeaturedTVShows extends React.Component {
             items.map((item, index) => (
               <div
                 key={index}
-                onClick={() => useNavigate().nav("details/tv/" + item.id)}
+                onClick={() => navigation.navigate("details/tv/" + item.id)}
               >
                 <h3>{item.title}</h3>
                 <img src={item.image} width={200} height={400} />

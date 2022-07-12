@@ -45,7 +45,7 @@ class TvShows extends React.Component {
           items.map((item, index) => (
             <div
               key={index}
-              onClick={() => useNavigate().nav("details/tv/" + item.id)}
+              onClick={() => navigation.navigate("details/tv/" + item.id)}
             >
               <h3>{item.title}</h3>
               <img src={item.image} />

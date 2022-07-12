@@ -48,7 +48,7 @@ class FeaturedMovies extends React.Component {
             items.map((item, index) => (
               <div
                 key={index}
-                onClick={() => useNavigate().nav("/Details/movie/" + item.id)}
+                onClick={() => navigation.navigate("details/tv/" + item.id)}
               >
                 <h3>{item.title}</h3>
                 <img src={item.image} width={200} height={400} />

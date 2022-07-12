@@ -44,7 +44,7 @@ class Movies extends React.Component {
           items.map((item, index) => (
             <div
               key={index}
-              onClick={() => useNavigate().nav("/Details/movie/" + item.id)}
+              onClick={() => navigation.navigate("/Details/movie/" + item.id)}
             >
               <h3>{item.title}</h3>
               <img src={item.image} />
