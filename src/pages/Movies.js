@@ -16,10 +16,7 @@ const Movies = () => {
     <div className="grid grid-cols-8 gap-4">
       {items?.length > 0 &&
         items.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => navigation.navigate("/Details/movie/" + item.id)}
-          >
+          <div key={index} onClick={() => nav("/Details/movie/" + item.id)}>
             <h3>{item.title}</h3>
             <img src={item.image} />
           </div>
